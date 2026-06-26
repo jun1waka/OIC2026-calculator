@@ -1,0 +1,74 @@
+.calc_app {
+	border: 1px solid #ccc;
+	padding: 10px;
+	position: fixed;
+	text-align: center;
+	background-color: #f0f0f0;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ドラッグでつかむ場所（ヘッダ） */
+.drag_handle {
+	width: 200px;
+	height: 24px;
+	line-height: 24px;
+	margin-bottom: 8px;
+	background-color: #4a90d9;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 12px;
+	cursor: move;          /* 「動かせる」と分かるカーソル */
+	user-select: none;     /* ドラッグ中に文字が選択されるのを防ぐ */
+}
+
+.display {
+	border: 1px solid #333;
+	width: 200px;
+	height: 50px;
+	margin-bottom: 10px;
+	line-height: 50px;
+	text-align: right;
+	overflow: hidden;
+	padding: 0 10px;
+	background-color: #e0e0e0;
+	border-radius: 5px;
+}
+
+.box {
+	width: 200px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.switch, .switch_dummy, .reset, .result, .calculation {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin: 1px;
+	width: calc(25% - 2px);
+	user-select: none;
+}
+
+/* ボタンの種類ごとに色を変えて見やすくする */
+.calculation {
+	background-color: #f5a623;
+	color: #fff;
+}
+
+.reset {
+	background-color: #d0021b;
+	color: #fff;
+}
+
+.result {
+	background-color: #4a90d9;
+	color: #fff;
+}
+
+.switch:hover, .reset:hover, .result:hover, .calculation:hover {
+	opacity: 0.8;
+}
